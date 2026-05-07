@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopLite</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+           <div class="logo-emblem">
+              <span class="logo-n">N</span>
+              <span class="logo-b">B</span>
+           </div>
+
+           <div class="logo-text">
+            <div class="logo-name">
+                 <span class="logo-nosi">NOSI</span><span class="logo-bane">BANE</span>
+            </div>
+              <span class="logo-tagline">PREMIUM STORE</span>
+           </div>
+        </div>
+       
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i>Home</a>
+            <a href="cart.html" id="cart-count"><i class="fas fa-shopping-cart"></i>Cart: 0</a>
+            <a href="auth.html" id="auth-link"><i class="fas fa-user"></i>Login</a>
+            <span id="user-greeting" style="color: white; margin-left: 20px;"></span>
+            <a href="#" id="logout-btn" style="display: none;" onclick="logout()"><i class="fas fa-sign-out-alt"></i>Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="search-filter-container">
+            <input type="text" id="search-input" placeholder="Search products..." oninput="filterProducts()"/>
+            
+            <select id="category-filter" onchange="filterProducts()">
+                <option value="">All Categories</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Home & Living">Home & Living</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Sports">Sports</option>
+                <option value="Music">Music</option>
+            </select>
+
+            <select id="price-filter" onchange="filterProducts()">
+                <option value="">All Prices</option>
+                 <option value="0-50">$0 - $50</option>
+                  <option value="50-100">$50 - $100</option>
+                  <option value="100-500">$100 - $500</option>
+                  <option value="500-99999">$500+</option>
+            </select>
+        </div>
+
+        <h2>Our Products</h2>
+        <div id="products-container"></div>
+        <p>Loading products...</p>
+    </main>
+    
+    <script src="app.js"></script>
+
+    <footer>
+        <p>@ 2026 NOSIBANE ShopLite. All rights reserved. 🛒</p>
+    </footer>
+</body>
+</html>

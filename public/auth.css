@@ -1,0 +1,193 @@
+.auth-container {
+    max-width: 420px;
+    margin: 60px auto;
+    background: none;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    border: 1px solid #e85fe9;
+}
+
+.auth-tabs {
+    display: flex;
+    margin-bottom: 28px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.auth-tabs button {
+    flex: 1;
+    padding: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.active-tab {
+    color: #1a5c2a !important;
+    border-bottom: 3px solid #1a5c2a !important;
+    font-weight: 700 !important;
+}
+
+.auth-container h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #1a5c2a;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 13px 16px;
+    margin-bottom: 16px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+    outline: none;
+}
+
+.auth-container input:focus {
+    border-color: #2d8a45;
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #1a5c2a, #2d8a45);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s;
+}
+
+.auth-container button:hover {
+  opacity: 0.9;
+}
+
+.error.msg {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+footer {
+    text-align: center;
+    padding: 24px;
+    background: #1a5c2a;
+    color: #c8f5d0;
+    font-size: 13px;
+    margin-top: 60px;
+}
+
+header nav a i {
+    margin-right: 5px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+   text-decoration: none;
+}
+
+.logo-emblem {
+   position: relative;
+   width: 52px;
+   height: 52px;
+   background: linear-gradient(145deg, #FFD700, #FFA500);
+   border-radius: 12px;
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+   overflow: hidden;
+}
+
+.logo-emblem::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 30px;
+    height: 30px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.logo-emblem::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 24px;
+    height: 24px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 50%;
+    animation: pulse 2s infinite 1s;
+}
+
+.logo-n {
+    font-family: 'Georgia', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #1a5c2a;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.logo-b {
+    font-family: 'Georgia', sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    color: rgba(26, 92, 42, 0.5);
+    position: absolute;
+    right: 4px;
+    bottom: 3px;
+    z-index: 3;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-name {
+    display: flex;
+    align-items: baseline;
+}
+
+.logo-nosi {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #FFD700;
+}
+
+.logo-bane {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.logo-tagline {
+    font-size: 7px;
+    letter-spacing: 4px;
+    color: rgba(255, 215, 0, 0.7);
+    margin-top: 3px;
+}

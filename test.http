@@ -1,0 +1,76 @@
+### Signup
+POST http://localhost:5001/api/auth/signup
+Content-Type: application/json
+
+{
+    "name": "Valentine",
+    "email": "nosibane50@gmail.com",
+    "password": "195206"
+}
+
+### Login
+# @name login
+POST http://localhost:5001/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "nosibane50@gmail.com",
+    "password": "195206"
+}
+
+### Get all Products
+GET http://localhost:5001/api/products
+
+### Add products (protected)
+POST http://localhost:5001/api/products
+Content-Type: application/json
+Authorization: Bearer {{login.response.body.token}}
+
+{
+    "name": "Piano Forte Keyboard",
+    "price": 67,
+    "description": "A Grand keyboard for staffs",
+    "category": "Musical Instruments",
+    "stock": 5
+}
+
+### Create an Order
+POST http://localhost:5001/api/orders
+Content-Type: application/json
+Authorization: Bearer {{login.response.body.token}}
+
+{
+    "items": [
+        {
+            "product": "69e1690ecb84ce541b1e7127",
+            "quantity": 3,
+            "price": 999
+        }
+    ],
+    "totalPrice": 2997
+}
+
+### Get my orders
+GET http://localhost:5001/api/orders/myorders
+Authorization: Bearer {{login.response.body.token}}
+
+### Get all users (admin only)
+GET http://localhost:5001/api/admin/users
+Authorization: Bearer {{login.response.body.token}}
+
+### Get all orders (admin only)
+GET http://localhost:5001/api/admin/orders
+Authorization: Bearer {{login.response.body.token}}
+
+### Update order status (admin only)
+PUT http://localhost:5001/api/admin/orders/69eb610ee0fabda4f9efafa7
+Content-Type: application/json
+Authorization: Bearer {{login.response.body.token}}
+
+{
+    "status": "shipped"
+}
+
+### DELETE a product (admin only)
+DELETE http://localhost:5001/api/products/69e9a8e3ccdccb21ba86f18f
+Authorization: Bearer {{login.response.body.token}}

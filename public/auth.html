@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login -shopLite</title>
+    <link rel="stylesheet" href="auth.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+      <div class="logo">
+               <div class="logo-emblem">
+                <span class="logo-n">N</span>
+                <span class="logo-b">B</span>
+            </div>
+            <div class="logo-text">
+                <div class="logo-name">
+                    <span class="logo-nosi">NOSI</span><span class="logo-bane">BANE</span>
+                </div>
+                <span class="logo-tagline">PREMIUM STORE</span>
+            </div>
+      </div>
+    </header>
+
+    <main>
+        <div class="auth-container">
+
+            <div class="auth-tabs">
+                <button id="login-tab" class="active-tab" onclick="showTab('login')">Login</button>
+                <button id="signup-tab" onclick="showTab('signup')">Sign up</button>
+            </div>
+
+            <!-- Signup Form-->
+             <div id="login-form">
+                <h2>Welcome Back!</h2>
+                <input type="email" id="login-email" placeholder="Email">
+                <input type="password" id="login-password" placeholder="Password">
+                <button onclick="login()">Login</button>
+                <p id="login-error" class="error-msg"></p>
+
+             </div>
+
+             <!--Signup Form-->
+             <div id="signup-form" style="display: none">
+                <h2>Create Account</h2>
+                <input type="text" id="signup-name" placeholder="Full name">
+                <input type="email" id="signup-email" placeholder="Email">
+                <input type="password" id="signup-password" placeholder="Password">
+                <button onclick="signup()">Sign Up</button>
+                <p id="signup-error" class="error-msg"></p>
+
+             </div>
+
+        </div>
+    </main>
+
+    <script src="auth.js"></script>
+    
+     <footer>
+        <p>@ 2026 NOSIBANE ShopLite. All rights reserved. 🛒</p>
+    </footer>
+</body>
+</html>
